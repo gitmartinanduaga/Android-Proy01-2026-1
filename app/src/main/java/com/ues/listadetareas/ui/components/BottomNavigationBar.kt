@@ -1,34 +1,28 @@
 package com.ues.listadetareas.ui.components
 
-
 import androidx.compose.material.icons.Icons
-
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.List
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
-import androidx.compose.ui.Modifier
 
 @Composable
-fun BottomNavigationBar() {
-
-    var selected by remember { mutableStateOf(0) }
-
+fun BottomNavigationBar(
+    selectedTab: Int,
+    onTabSelected: (Int) -> Unit
+) {
     NavigationBar {
         NavigationBarItem(
-            selected = selected == 0,
-            onClick = { selected = 0 },
+            selected = selectedTab == 0,
+            onClick = { onTabSelected(0) },
             label = { Text("Pendientes") },
-            icon = { Icon(Icons.Default.List, contentDescription = null) }
+            icon = { Icon(Icons.Default.List, contentDescription = "Pendientes") }
         )
         NavigationBarItem(
-            selected = selected == 1,
-            onClick = { selected = 1 },
+            selected = selectedTab == 1,
+            onClick = { onTabSelected(1) },
             label = { Text("Completadas") },
-            icon = { Icon(Icons.Default.Check, contentDescription = null) }
+            icon = { Icon(Icons.Default.Check, contentDescription = "Completadas") }
         )
     }
 }
-
-
-
