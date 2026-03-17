@@ -11,8 +11,8 @@ import androidx.room.Room
 import com.ues.listadetareas.data.AppDatabase
 import com.ues.listadetareas.data.repository.TaskRepositoryImpl
 import com.ues.listadetareas.ui.TaskApp
-import com.ues.listadetareas.ui.TaskViewModel
-import com.ues.listadetareas.ui.TaskViewModelFactory
+import com.ues.listadetareas.data.TaskViewModel
+import com.ues.listadetareas.data.TaskViewModelFactory
 import com.ues.listadetareas.ui.theme.ListaDeTareasTheme
 
 class MainActivity : ComponentActivity() {

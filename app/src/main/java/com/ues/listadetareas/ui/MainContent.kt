@@ -5,12 +5,12 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import com.ues.listadetareas.data.TaskViewModel
 import com.ues.listadetareas.domain.Task
-import com.ues.listadetareas.ui.theme.TaskListScreenContent
 
 @Composable
 fun MainContent(
-    viewModel: TaskViewModel, 
+    viewModel: TaskViewModel,
     onEditTask: (Task) -> Unit,
     modifier: Modifier = Modifier
 ) {
